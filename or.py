@@ -4,7 +4,7 @@ from utils.all_utils import prepare_data, save_plot
 
 def main(data, modelName, plotName, eta, epochs):
 
-    df_OR = pd.DataFrame(OR)
+    df_OR = pd.DataFrame(OR)_
 
     X, y = prepare_data(df_OR)
 
@@ -14,7 +14,7 @@ def main(data, modelName, plotName, eta, epochs):
 
     _ = perceptron_OR.total_loss()
 
-    perceptron_OR.save(filename="or.model")  
+    perceptron_OR.save(filename="or.model")  P
     reload_OR = Perceptron().load(filepath = "model/or.model")
 
     save_plot(df_OR, reload_OR, filename="or.png")
